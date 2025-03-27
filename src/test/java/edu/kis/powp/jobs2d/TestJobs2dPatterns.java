@@ -29,6 +29,9 @@ public class TestJobs2dPatterns {
 
 		application.addTest("Figure Joe 1", selectTestFigureOptionListener);
 		application.addTest("Figure Joe 2", selectTestFigureOptionListener);
+		application.addTest("Circle", selectTestFigureOptionListener);
+		application.addTest("Triangle", selectTestFigureOptionListener);
+		application.addTest("Square", selectTestFigureOptionListener);
 	}
 
 	/**
@@ -52,6 +55,9 @@ public class TestJobs2dPatterns {
 
 		Job2dDriver testDriver3 = new LineDrawerAdapter(DrawerFeature.getDrawerController(),LineFactory.getDottedLine());
 		DriverFeature.addDriver("Dotted line", testDriver3);
+
+		Job2dDriver testDriver4 = new LineDrawerAdapter(DrawerFeature.getDrawerController(),LineFactory.getSpecialLine());
+
 
 		DriverFeature.updateDriverInfo();
 	}
